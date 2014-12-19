@@ -99,3 +99,38 @@ Member functions:
 	1.top-->mypq.top() Access top element of queue which is greatest of all values present in queue(that is head node of heap)
 	2.push-->mypq.push(value) Insert element
 	3.pop-->mypq.pop() Remove top element (greatest one)
+
+
+
+std::stack   std::stack<int> mystack
+==========
+	1. Stacks are a type of container adaptor, specifically designed to operate in a LIFO context (last-in first-out), where elements are inserted and extracted only from one end of the container
+Member functions:
+-----------------
+	1.top-->Access top element  [mystack.top()]
+	2.push-->Push element in stack  [mystack.push(value)]
+	3.pop-->Pop element from stack  [mystack.pop()]
+**P.S: 1.No iterators,No sorting,No reversing
+  ----
+
+
+
+std::vector   std::vector<int> myvector
+===========
+	1.dynamic allocation of arrays
+Iterators:
+----------	std::vector<int>::iterator it
+	begin-->return iterator to beginning  [it=myvector.begin()]
+	end-->return iterator to end  [it=myvector.end()]
+	rbegin-->Return reverse iterator to reverse beginning  [it=myvector.rbegin()]
+	rend-->Return reverse iterator to reverse end  [it=myvector.rend()]
+Element access:
+---------------
+	front-->Access first element  [myvector.front()]
+	back-->Access last element  [myvector.back()]
+Modifiers:
+----------
+	push_back-->Add element at end [myvector.push_back(value)]
+	pop_back-->pop last element  [myvector.pop_back()]
+
+**P.S: No sorting,No reversing,Cannot remove value in middle of container
