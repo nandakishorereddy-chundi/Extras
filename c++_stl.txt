@@ -1,0 +1,101 @@
+std::deque   std::deque<int> mydeque
+==========
+Iterators:
+----------
+		std::deque<int>::iterator it
+	begin-->return iterator to beginning  [it=mydeque.begin()]
+	end-->return iterator to end  [it=mydeque.end()]
+
+Element access:
+---------------
+	front-->Access first element  [mydeque.front()]
+	back-->Access last element  [mydeque.back()]
+
+Modifiers:
+----------
+	push_back-->Add element at end  [mydeque.push_back(value)]
+	push_front-->Add element at beginning  [mydeque.push_front(value)]
+	pop_back-->Delete last element  [mydeque.pop_back()]
+	pop_front-->Delete fast element  [mydeque.pop_front()]
+
+***P.S: 1.we cannot sort or reverse values present in deque container
+   ---- 2.we cannot remove value present in middle of container
+
+
+
+std::list   std::list<int> mylist
+=========
+	1. Lists are sequence containers that allow insert and erase operations anywhere within the sequence and can iterate in both directions hence bidirectional iterator
+	2. List containers are implemented as doubly-linked-lists
+	3. No direct access, that is to access an element we have to iterate through the list
+Iterators:
+----------
+		std::list<int>::iterator it
+	begin-->returns pointer at the beginning of the linked list to iterate from beginning of the list  [it=mylist.begin()]
+	end-->returns pointer at the end of the linked list to iterate from the end of the list  [it=mylist.end()]
+	rbegin-->return reverse iterator to reverse beginning that is backward iterator
+	rend-->return reverse iterator to reverse end that is backward iterator
+Capacity:
+---------
+	empty:checks whether container is empty
+	size:returns size of container
+Element access:
+---------------
+	front-->access first element  [mylist.front()]
+	back-->access last element  [mylist.back()]
+Modifiers:
+----------
+	1.push_front-->insert element at beginning  [mylist.push_front(value)]
+	2.pop_front-->pop first element  [mylist.pop_front()]
+	3.push_back-->insert element at end  [mylist.push_back(value)]
+	4.pop_back-->pop last element  [mylist.pop_back()]
+Operations:
+-----------
+	1.remove-->remove elements with specific value  [mylist.remove(value)]
+	2.remove_if-->remove elements full filling condition  [mylist.remove(condition)]
+	3.sort-->sort elements in container  [mylist.sort()]
+	4.reverse-->reverse the order of elements  [mylist.reverse()]
+
+
+
+std::map   std::map<key,value> mymap
+========
+	1. Maps are associative containers that store elements formed by a combination of a unique key value and a mapped value, following a specific order
+	2. In a map, the key values(unique) are generally used to sort and uniquely identify the elements, while the mapped values store the content associated to this key
+Iterators:
+----------   std::map<key,value>::iterator it  [it->first=key,it->second=value]
+	begin-->return iterator to beginning  [mymap.begin()]
+	end-->return iterator to end [mymap.end()]
+	rbegin-->Return reverse iterator to reverse beginning  [mymap.rbegin()]
+	rend-->Return reverse iterator to reverse end  [mymap.rend()]
+Element access:
+---------------
+	mymap[key]=value similar to dictionary in python
+
+
+
+std::queue  std::queue<int> myqueue
+==========
+	1. queues are a type of container adaptor, specifically designed to operate in a FIFO context (first-in first-out), where elements are inserted into one end of the container and extracted from the other
+	2. queues are implemented as containers adaptors, which are classes that use an encapsulated object of a specific container class as its underlying container, providing a specific set of member functions to access its elements. Elements are pushed into the "back" of the specific container and popped from its "front"
+Member Functions:
+-----------------
+	1.front-->myqueue.front() element which is going to be poped
+	2.back-->myqueue.back() element which is latestly pushed
+	3.push-->myqueue.push(value) element to be inserted
+	4.pop-->myqueue.pop() element to be poped
+
+**P.S: 1.There are no iterators like begin(),end() for queues
+  ---- 2. Cannot be sorted or reversed unlike we did in syd::list
+
+
+
+std::priority_queue  std::priority_queue<int> mypq
+===================
+	1. Priority queues are a type of container adaptors, specifically designed such that its first element is always the greatest of the elements it contains
+	2. This context is similar to a heap, where elements can be inserted at any moment, and only the max heap element can be retrieved (the one at the top in the priority queue)
+Member functions:
+-----------------
+	1.top-->mypq.top() Access top element of queue which is greatest of all values present in queue(that is head node of heap)
+	2.push-->mypq.push(value) Insert element
+	3.pop-->mypq.pop() Remove top element (greatest one)
