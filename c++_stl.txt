@@ -134,3 +134,29 @@ Modifiers:
 	pop_back-->pop last element  [myvector.pop_back()]
 
 **P.S: No sorting,No reversing,Cannot remove value in middle of container
+
+
+
+Important Functions in <algorithm> library
+==========================================
+	starting_point-->address of starting element of array or container, similarlly for ending_point refers to address
+
+1.count-->count appearances of value in given range
+	syntax: std::count(starting_point,ending_point,value)
+2.count_if-->Return number of elements in range satisfying condition
+	syntax: std::count_if(starting_point,ending_point,condition)
+3.search-->search subsequence in a sequence
+	syntax: std::search(sequence_start_point,sequence_end_point,subsequence_start_point,subsequence_end_point)
+	if subsequence found then returns pointer to first element of sequence if not then last element
+4.swap-->exchange values of two objects
+	syntax: std::swap(first_elem,second_elem)
+	we can swap even containers-->syntax: std::vector<int> foo(2,10), bar(6,20) 
+	std::swap(foo,bar) then foo contains 20,20,20,20,20,20 and bar contains 10,10
+5.sort-->sort elements in range
+	syntax: std::sort(starting_point,ending_point)  sorts corresponding array or container
+6.binary_search-->Test if value exists in sorted sequence
+	syntax: std::binary_search(starting_point,ending_point,value) note that array or container should be sorted
+7.min-->return the smallest
+	syntax: std::min(val1,val2)
+8.max-->retuen the largest
+	syntax: std::max(val1,val2)
